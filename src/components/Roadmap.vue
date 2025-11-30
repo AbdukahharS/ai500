@@ -68,20 +68,20 @@
         <div class="timeline">
           <div class="timeline-item completed">
             <div class="timeline-dot">✓</div>
-            <div class="timeline-line"></div>
             <span class="timeline-label">Идея</span>
           </div>
+          <div class="timeline-connector"></div>
           <div class="timeline-item completed">
             <div class="timeline-dot">✓</div>
-            <div class="timeline-line"></div>
             <span class="timeline-label">Прототип</span>
           </div>
+          <div class="timeline-connector"></div>
           <div class="timeline-item current">
             <div class="timeline-dot">✓</div>
-            <div class="timeline-line inactive"></div>
             <span class="timeline-label">MVP</span>
             <span class="timeline-badge">Текущий этап</span>
           </div>
+          <div class="timeline-connector inactive"></div>
           <div class="timeline-item">
             <div class="timeline-dot inactive">✓</div>
             <span class="timeline-label">Запуск</span>
@@ -345,18 +345,21 @@
 
 .project-title {
   font-family: 'Kalnia', sans-serif;
-  font-size: 100px;
+  font-size: 80px;
   font-weight: 400;
   margin-bottom: 20px;
   color: #e0f540;
   text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.02em;
 }
 
 .project-subtitle {
   font-family: 'Livvic', sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   color: #ffffff;
+  line-height: 1.4;
 }
 
 /* Timeline Section */
@@ -376,11 +379,12 @@
 .timeline {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 0;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   position: relative;
+  padding: 0 60px;
 }
 
 .timeline-item {
@@ -388,6 +392,18 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+
+.timeline-connector {
+  flex: 1;
+  height: 2px;
+  background: #e0f540;
+  min-width: 100px;
+  margin-top: 32px;
+}
+
+.timeline-connector.inactive {
+  background: #898989;
 }
 
 .timeline-dot {
@@ -412,40 +428,30 @@
 }
 
 .timeline-item.current .timeline-dot {
-  background: #e0f540;
-  box-shadow: 0 0 20px rgba(224, 245, 64, 0.5);
-}
-
-.timeline-line {
-  position: absolute;
-  left: 100%;
-  top: 28px;
-  width: 140px;
-  height: 2px;
-  background: #e0f540;
-  z-index: 1;
-}
-
-.timeline-line.inactive {
   background: #898989;
+  box-shadow: 0 0 20px rgba(224, 245, 64, 0.5);
+  color: #c5d936;
 }
 
 .timeline-label {
   margin-top: 20px;
   font-family: 'Livvic', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 300;
   color: #ffffff;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .timeline-badge {
-  margin-top: 12px;
-  padding: 6px 16px;
+  margin-top: 8px;
+  padding: 4px 12px;
   background: rgba(224, 245, 64, 0.2);
-  border-radius: 16px;
-  font-size: 14px;
+  border-radius: 12px;
+  font-size: 12px;
   font-weight: 300;
   color: #e0f540;
+  white-space: nowrap;
 }
 
 /* Tech Section */
