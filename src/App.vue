@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import logo from './assets/logo.svg'
@@ -8,10 +8,25 @@ import Problem from './components/Problem.vue'
 import Solution from './components/Solution.vue'
 import Team from './components/Team.vue'
 import Roadmap from './components/Roadmap.vue'
+import Loading from './components/Loading.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
+const isLoading = ref(true)
+const showLoading = ref(true)
+
+const handleLoadingComplete = () => {
+  showLoading.value = false
+}
+
 onMounted(() => {
+  // Wait for window load event
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      isLoading.value = false
+    }, 500)
+  })
+
   const problemSection = document.getElementById('problem')
   const solutionSection = document.getElementById('solution')
   const teamSection = document.getElementById('team')
@@ -230,6 +245,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <Loading v-if="showLoading" :is-loading="isLoading" @complete="handleLoadingComplete" />
   <div class="scroll"></div>
   <div class="app">
     <img :src="logo" alt="logo" class="logo" />
