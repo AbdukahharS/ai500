@@ -60,7 +60,7 @@ onMounted(() => {
   left: 0;
   top: 0;
   z-index: 10;
-  will-change: transform, filter, width, height;
+  will-change: transform, filter, width, height, clip-path, border-radius;
 
   .line {
     height: 1px;

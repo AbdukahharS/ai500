@@ -28,7 +28,7 @@ import GlassSurface from './GlassSurface.vue';
                 </div>
                 <div class="buttons">
                     <GlassSurface :height="48" :width="296" :border-radius="24" :distortion-scale="10"><button class="white">Попробовать демо</button></GlassSurface>
-                    <GlassSurface :height="48" :width="296" :border-radius="24":distortion-scale="10"><button class="yellow">Узнать больше</button></GlassSurface>
+                    <GlassSurface :height="48" :width="296" :border-radius="24" :distortion-scale="10"><button class="yellow">Узнать больше</button></GlassSurface>
                 </div>
             </div>
         </div>
