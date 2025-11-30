@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import logo from '../assets/logo.svg'
 import video from '../assets/hero-bg.mp4'
 import GlassSurface from './GlassSurface.vue';
 </script>
@@ -17,7 +16,6 @@ import GlassSurface from './GlassSurface.vue';
                 <div class="orbit"></div>
             </div>
         </div>
-        <img :src="logo" alt="logo" class="logo">
         <div class="content">
             <div class="top">
                 <h1>AI</h1>
@@ -209,12 +207,6 @@ import GlassSurface from './GlassSurface.vue';
             border: 2px solid #898989;
             border-radius: 50%;
         }
-    }
-
-    .logo {
-        position: absolute;
-        top: 1vh;
-        left: 3vw;
     }
 }
 </style>
