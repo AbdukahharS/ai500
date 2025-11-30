@@ -54,24 +54,13 @@ onMounted(() => {
 #problem {
   position: absolute;
   overflow: hidden;
-  transition: all 1s ease-in-out;
-  clip-path: circle(10%);
-  filter: grayscale(0) contrast(1);
+  clip-path: circle(100%);
   width: 100vw;
   height: 100vh;
   left: 0;
   top: 0;
   z-index: 10;
-
-  &:not(.active) {
-    clip-path: circle();
-    filter: grayscale(1) contrast(0);
-    width: 32px;
-    height: 32px;
-    left: 0;
-    top: 50%;
-    transform: translateX(-50%);
-  }
+  will-change: transform, filter, width, height;
 
   .line {
     height: 1px;
