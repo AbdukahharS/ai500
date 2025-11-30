@@ -6,14 +6,16 @@ import logo from './assets/logo.svg'
 import Hero from './components/Hero.vue'
 import Problem from './components/Problem.vue'
 import Solution from './components/Solution.vue'
+import Team from './components/Team.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
 onMounted(() => {
   const problemSection = document.getElementById('problem')
   const solutionSection = document.getElementById('solution')
+  const teamSection = document.getElementById('team')
 
-  if (!problemSection || !solutionSection) return
+  if (!problemSection || !solutionSection || !teamSection) return
 
   // Set initial state
   gsap.set(problemSection, {
@@ -39,12 +41,24 @@ onMounted(() => {
     borderRadius: '50%',
   })
 
+  gsap.set(teamSection, {
+    width: '32px',
+    height: '32px',
+    left: 0,
+    top: '50%',
+    x: '-50%',
+    y: 88,
+    filter: 'grayscale(1) contrast(0)',
+    clipPath: 'circle(32px)',
+    borderRadius: '50%',
+  })
+
   // Problem section scroll trigger
   gsap.timeline({
     scrollTrigger: {
       trigger: '.scroll',
       start: 'top top',
-      end: '33% top',
+      end: '25% top',
       scrub: 1,
       onEnter: () => {
         gsap.to(problemSection, {
@@ -83,8 +97,8 @@ onMounted(() => {
   gsap.timeline({
     scrollTrigger: {
       trigger: '.scroll',
-      start: '50% top',
-      end: '66% top',
+      start: '25% top',
+      end: '50% top',
       scrub: 1,
       onEnter: () => {
         gsap.to(solutionSection, {
@@ -118,6 +132,46 @@ onMounted(() => {
       },
     },
   })
+
+  // Team section scroll trigger
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.scroll',
+      start: '50% top',
+      end: '75% top',
+      scrub: 1,
+      onEnter: () => {
+        gsap.to(teamSection, {
+          width: '100vw',
+          height: '100vh',
+          left: 0,
+          top: 0,
+          x: '0%',
+          y: 0,
+          filter: 'grayscale(0) contrast(1)',
+          clipPath: 'circle(100%)',
+          duration: 1.2,
+          ease: 'power2.inOut',
+          borderRadius: '0%',
+        })
+      },
+      onLeaveBack: () => {
+        gsap.to(teamSection, {
+          width: '32px',
+          height: '32px',
+          left: 0,
+          top: '50%',
+          x: '-50%',
+          y: 88,
+          filter: 'grayscale(1) contrast(0)',
+          clipPath: 'circle(32px)',
+          duration: 1.2,
+          ease: 'power2.inOut',
+          borderRadius: '50%',
+        })
+      },
+    },
+  })
 })
 </script>
 
@@ -129,13 +183,14 @@ onMounted(() => {
     <div class="dots">
       <Problem />
       <Solution />
+      <Team />
     </div>
   </div>
 </template>
 
 <style scoped>
 .scroll {
-  height: 300vh;
+  height: 400vh;
 }
 
 .app {
