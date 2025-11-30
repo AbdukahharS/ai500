@@ -1,0 +1,681 @@
+<script setup lang="ts"></script>
+
+<template>
+  <section id="roadmap" class="roadmap">
+    <div class="container">
+      <!-- Problem Cards Section -->
+      <div class="problem-cards-section">
+        <h2 class="section-title">Почему мы можем решить эту задачу</h2>
+        <p class="section-subtitle">
+          Уникальное сочетание экспертизы, опыта и страсти к инновациям в
+          агротехнологиях
+        </p>
+
+        <div class="cards-grid">
+          <div class="card">
+            <div class="icon">🌾</div>
+            <h3>Понимание агроклимата и климата</h3>
+            <p>
+              Наша команда имеет глубокие знания в агрономии и специфике работы
+              в засушливых регионах. Мы изучили потребности фермеров и понимаем
+              их ежедневные вызовы.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">📍</div>
+            <h3>Опыт в ML и разработке</h3>
+            <p>
+              15+ лет суммарного опыта команды в machine learning, backend и
+              frontend разработке. Мы создавали решения для крупных компаний и
+              знаем, как масштабировать продукты.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">👥</div>
+            <h3>Проекты участников</h3>
+            <p>
+              Члены команды реализовали успешные проекты в agritech, IoT и AI с
+              реальными результатами: системы мониторинга полей, платформы
+              прогноза урожая.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">💚</div>
+            <h3>Мотивация и цель</h3>
+            <p>
+              Мы стремимся решать реальную проблему и сделать сельское хозяйство
+              устойчивым и эффективным. Забота об экологии и помощь фермерам —
+              наша миссия.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI500 Project Section -->
+      <div class="project-intro">
+        <h2 class="project-title">AI500 Project</h2>
+        <p class="project-subtitle">
+          Инновационное решение на основе искусственного интеллекта
+        </p>
+      </div>
+
+      <!-- Roadmap Timeline -->
+      <div class="timeline-section">
+        <h3 class="timeline-title">Дорожная карта</h3>
+        <div class="timeline">
+          <div class="timeline-item completed">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-line"></div>
+            <span class="timeline-label">Идея</span>
+          </div>
+          <div class="timeline-item completed">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-line"></div>
+            <span class="timeline-label">Прототип</span>
+          </div>
+          <div class="timeline-item current">
+            <div class="timeline-dot">✓</div>
+            <div class="timeline-line inactive"></div>
+            <span class="timeline-label">MVP</span>
+            <span class="timeline-badge">Текущий этап</span>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot inactive">✓</div>
+            <span class="timeline-label">Запуск</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Section -->
+      <div class="tech-section">
+        <h3 class="tech-title">Как мы реализуем решение</h3>
+
+        <div class="tech-cards">
+          <!-- Technologies Card -->
+          <div class="tech-card white-card">
+            <div class="tech-header">
+              <div class="tech-icon">💻</div>
+              <h4>Технологии</h4>
+            </div>
+
+            <div class="tech-category">
+              <div class="category-icon">⚛️</div>
+              <div class="category-content">
+                <h5>Frontend</h5>
+                <div class="tags">
+                  <span class="tag">React</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">Tailwind CSS</span>
+                  <span class="tag">Next.js</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <div class="category-icon">⚙️</div>
+              <div class="category-content">
+                <h5>Backend</h5>
+                <div class="tags">
+                  <span class="tag">Node.js</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">FastAPI</span>
+                  <span class="tag">REST API</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <div class="category-icon">🤖</div>
+              <div class="category-content">
+                <h5>AI & ML</h5>
+                <div class="tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">TensorFlow</span>
+                  <span class="tag">OpenAI GPT</span>
+                  <span class="tag">LangChain</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <div class="category-icon">💾</div>
+              <div class="category-content">
+                <h5>База данных</h5>
+                <div class="tags">
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">Redis</span>
+                  <span class="tag">Vector DB</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="tech-category">
+              <div class="category-icon">🔌</div>
+              <div class="category-content">
+                <h5>API</h5>
+                <div class="tags">
+                  <span class="tag">GraphQL</span>
+                  <span class="tag">WebSocket</span>
+                  <span class="tag">OAuth 2.0</span>
+                  <span class="tag">JWT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Card -->
+          <div class="tech-card green-card">
+            <div class="tech-header">
+              <div class="tech-icon">🤖</div>
+              <h4>Как работает AI</h4>
+            </div>
+
+            <div class="ai-feature">
+              <div class="ai-icon">🧠</div>
+              <div class="ai-content">
+                <h5>Модели</h5>
+                <p>GPT-4, Claude, Custom Fine-tuned Models</p>
+              </div>
+            </div>
+
+            <div class="ai-feature">
+              <div class="ai-icon">📊</div>
+              <div class="ai-content">
+                <h5>Данные</h5>
+                <p>Обработка и визуализация больших объёмов данных</p>
+              </div>
+            </div>
+
+            <div class="ai-feature">
+              <div class="ai-icon">💡</div>
+              <div class="ai-content">
+                <h5>Рекомендации</h5>
+                <p>Персонализированные рекомендации на основе ML</p>
+              </div>
+            </div>
+
+            <div class="ai-process">
+              <h5>Процесс работы AI:</h5>
+              <ul>
+                <li>✅ Сбор данных</li>
+                <li>✅ Обучение моделей</li>
+                <li>✅ Генерация решений</li>
+                <li>✅ Непрерывное улучшение</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="footer-logo">
+              <div class="logo-icon">🌱</div>
+              <span>AI500 Project</span>
+            </div>
+            <p class="footer-description">
+              Инновационное решение на основе искусственного интеллекта,
+              созданное для ресурса AI500
+            </p>
+            <button class="footer-button">
+              🚀 Посмотреть задачи для AI500
+            </button>
+          </div>
+
+          <div class="footer-right">
+            <h4>Контакты</h4>
+            <div class="contact-links">
+              <a href="mailto:info@ai500project.com" class="contact-link">
+                <span>📧</span>
+                info@ai500project.com
+              </a>
+              <a href="https://t.me/ai500project" class="contact-link">
+                <span>✈️</span>
+                @ai500project
+              </a>
+              <a href="https://github.com/ai500project" class="contact-link">
+                <span>💻</span>
+                github.com/ai500project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 AI500 Project. Все права защищены.</p>
+        </div>
+      </footer>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.roadmap {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  overflow: hidden;
+  z-index: 50;
+  height: auto !important;
+}
+
+.container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 100%;
+  padding: 60px 80px;
+}
+
+/* Problem Cards Section */
+.problem-cards-section {
+  margin-bottom: 80px;
+}
+
+.section-title {
+  font-family: 'Kalnia', serif;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-family: 'Livvic', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #e0f540;
+  margin-bottom: 48px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-4px);
+}
+
+.card .icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-family: 'Labrada', serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Project Intro */
+.project-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.project-title {
+  font-family: 'Kalnia', serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.project-subtitle {
+  font-family: 'Livvic', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Timeline Section */
+.timeline-section {
+  margin-bottom: 80px;
+}
+
+.timeline-title {
+  font-family: 'Kalnia', serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.timeline-dot.inactive {
+  background: #666;
+}
+
+.timeline-item.current .timeline-dot {
+  background: #4caf50;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 100%;
+  top: 24px;
+  width: 120px;
+  height: 4px;
+  background: #4caf50;
+  z-index: 1;
+}
+
+.timeline-line.inactive {
+  background: #666;
+}
+
+.timeline-label {
+  margin-top: 16px;
+  font-family: 'Livvic', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.timeline-badge {
+  margin-top: 8px;
+  padding: 4px 12px;
+  background: rgba(76, 175, 80, 0.2);
+  border-radius: 12px;
+  font-size: 12px;
+  color: #4caf50;
+}
+
+/* Tech Section */
+.tech-section {
+  margin-bottom: 80px;
+}
+
+.tech-title {
+  font-family: 'Kalnia', serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tech-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tech-card {
+  border-radius: 24px;
+  padding: 40px;
+}
+
+.white-card {
+  background: white;
+  color: #1a1a1a;
+}
+
+.green-card {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+}
+
+.tech-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tech-icon {
+  font-size: 32px;
+}
+
+.tech-header h4 {
+  font-family: 'Kalnia', serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.tech-category {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.category-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.category-content h5 {
+  font-family: 'Labrada', serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Livvic', sans-serif;
+}
+
+/* AI Features */
+.ai-feature {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ai-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.ai-content h5 {
+  font-family: 'Labrada', serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ai-content p {
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.ai-process {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-process h5 {
+  font-family: 'Labrada', serif;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.ai-process ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.ai-process li {
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  padding: 8px 0;
+  opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Kalnia', serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.logo-icon {
+  font-size: 32px;
+}
+
+.footer-description {
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 400px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.footer-button {
+  padding: 12px 24px;
+  background: #e0f540;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 245, 64, 0.3);
+}
+
+.footer-right h4 {
+  font-family: 'Kalnia', serif;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #e0f540;
+}
+
+.contact-link span {
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  font-family: 'Livvic', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+</style>

@@ -7,6 +7,7 @@ import Hero from './components/Hero.vue'
 import Problem from './components/Problem.vue'
 import Solution from './components/Solution.vue'
 import Team from './components/Team.vue'
+import Roadmap from './components/Roadmap.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -14,8 +15,9 @@ onMounted(() => {
   const problemSection = document.getElementById('problem')
   const solutionSection = document.getElementById('solution')
   const teamSection = document.getElementById('team')
+  const roadmapSection = document.getElementById('roadmap')
 
-  if (!problemSection || !solutionSection || !teamSection) return
+  if (!problemSection || !solutionSection || !teamSection || !roadmapSection) return
 
   // Set initial state
   gsap.set(problemSection, {
@@ -53,6 +55,18 @@ onMounted(() => {
     borderRadius: '50%',
   })
 
+  gsap.set(roadmapSection, {
+    width: '32px',
+    maxHeight: '32px',
+    left: 0,
+    top: '50%',
+    x: '-50%',
+    y: 132,
+    filter: 'grayscale(1) contrast(0)',
+    clipPath: 'circle(32px)',
+    borderRadius: '50%',
+  })
+
   // Problem section scroll trigger
   gsap.timeline({
     scrollTrigger: {
@@ -62,7 +76,7 @@ onMounted(() => {
       scrub: 1,
       onEnter: () => {
         gsap.to(problemSection, {
-          width: '100vw',
+          width: '100%',
           height: '100vh',
           left: 0,
           top: 0,
@@ -102,7 +116,7 @@ onMounted(() => {
       scrub: 1,
       onEnter: () => {
         gsap.to(solutionSection, {
-          width: '100vw',
+          width: '100%',
           height: '100vh',
           left: 0,
           top: 0,
@@ -142,7 +156,7 @@ onMounted(() => {
       scrub: 1,
       onEnter: () => {
         gsap.to(teamSection, {
-          width: '100vw',
+          width: '100%',
           height: '100vh',
           left: 0,
           top: 0,
@@ -172,6 +186,46 @@ onMounted(() => {
       },
     },
   })
+
+  // Roadmap section scroll trigger
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.scroll',
+      start: '75% top',
+      end: '100% top',
+      scrub: 1,
+      onEnter: () => {
+        gsap.to(roadmapSection, {
+          width: '100%',
+          maxHeight: '500vh',
+          left: 0,
+          top: 0,
+          x: '0%',
+          y: 0,
+          filter: 'grayscale(0) contrast(1)',
+          clipPath: 'circle(100%)',
+          duration: 1.2,
+          ease: 'power2.inOut',
+          borderRadius: '0%',
+        })
+      },
+      onLeaveBack: () => {
+        gsap.to(roadmapSection, {
+          width: '32px',
+          maxHeight: '32px',
+          left: 0,
+          top: '50%',
+          x: '-50%',
+          y: 132,
+          filter: 'grayscale(1) contrast(0)',
+          clipPath: 'circle(32px)',
+          duration: 1.2,
+          ease: 'power2.inOut',
+          borderRadius: '50%',
+        })
+      },
+    },
+  })
 })
 </script>
 
@@ -186,18 +240,19 @@ onMounted(() => {
       <Team />
     </div>
   </div>
+  <Roadmap />
 </template>
 
 <style scoped>
 .scroll {
-  height: 400vh;
+  height: 500vh;
 }
 
 .app {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   .logo {
